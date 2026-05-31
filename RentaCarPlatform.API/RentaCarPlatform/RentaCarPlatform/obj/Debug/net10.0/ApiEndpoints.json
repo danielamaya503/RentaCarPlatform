@@ -1,0 +1,460 @@
+[
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.SIS.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Authentificate/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.SIS.Request.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.SIS.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/Authentificate/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.SIS.AuthController",
+    "Method": "Verificar",
+    "RelativePath": "api/Authentificate/verificar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.EstadoVehiculoController",
+    "Method": "Actualizar",
+    "RelativePath": "api/EstadoVehicu/Actualizar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarEstadoVehiculoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.EstadoVehiculoController",
+    "Method": "Crear",
+    "RelativePath": "api/EstadoVehicu/Crear",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.CrearEstadoVehiculoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.EstadoVehiculoController",
+    "Method": "Desactivar",
+    "RelativePath": "api/EstadoVehicu/Desactivar/{estadoVehiculoId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estadoVehiculoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.EstadoVehiculoController",
+    "Method": "Obtener",
+    "RelativePath": "api/EstadoVehicu/Obtener/{estadoVehiculoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estadoVehiculoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.EstadoVehiculoController",
+    "Method": "ObtenerTodos",
+    "RelativePath": "api/EstadoVehicu/ObtenerTodos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.MarcaController",
+    "Method": "Actualizar",
+    "RelativePath": "api/MarcaVehiculo/Actualizar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarMarcaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.MarcaController",
+    "Method": "Crear",
+    "RelativePath": "api/MarcaVehiculo/Crear",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.CrearMarcaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.MarcaController",
+    "Method": "Desactivar",
+    "RelativePath": "api/MarcaVehiculo/Desactivar/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.MarcaController",
+    "Method": "ObtenerId",
+    "RelativePath": "api/MarcaVehiculo/ObtenerId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.MarcaController",
+    "Method": "ObtenerTodos",
+    "RelativePath": "api/MarcaVehiculo/ObtenerTodos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
+    "Method": "Actualizar",
+    "RelativePath": "api/ModeloVehiculo/Actualizar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarModeloRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
+    "Method": "Crear",
+    "RelativePath": "api/ModeloVehiculo/Crear",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.CrearModeloRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
+    "Method": "Desactivar",
+    "RelativePath": "api/ModeloVehiculo/Desactivar/{modeloId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modeloId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
+    "Method": "ObtenerPorId",
+    "RelativePath": "api/ModeloVehiculo/ObtenerPorId/{modeloId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modeloId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
+    "Method": "ObtenerPorMarca",
+    "RelativePath": "api/ModeloVehiculo/ObtenerPorMarca/{marcaId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "marcaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
+    "Method": "ObtenerTodos",
+    "RelativePath": "api/ModeloVehiculo/ObtenerTodos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.TipoVehiculoController",
+    "Method": "Actualizar",
+    "RelativePath": "api/TipoVehiculo/Actualizar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarTipoVehiculoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.TipoVehiculoController",
+    "Method": "Crear",
+    "RelativePath": "api/TipoVehiculo/Crear",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.CrearTipoVehiculoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.TipoVehiculoController",
+    "Method": "Desactivar",
+    "RelativePath": "api/TipoVehiculo/Desactivar/{tipoVehiculoId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoVehiculoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.TipoVehiculoController",
+    "Method": "Obtener",
+    "RelativePath": "api/TipoVehiculo/Obtener/{tipoVehiculoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoVehiculoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.TipoVehiculoController",
+    "Method": "ObtenerTodo",
+    "RelativePath": "api/TipoVehiculo/ObtenerTodo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.SIS.UsuarioController",
+    "Method": "CambiarContrasena",
+    "RelativePath": "api/Usuario/{id}/cambiar-contrasena",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.SIS.Request.CambiarContrasenaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.SIS.UsuarioController",
+    "Method": "Actualizar",
+    "RelativePath": "api/Usuario/Actualizar/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.SIS.Request.ActualizarUsuarioRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.SIS.UsuarioController",
+    "Method": "ObtenerPorId",
+    "RelativePath": "api/Usuario/ById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.SIS.UsuarioController",
+    "Method": "Crear",
+    "RelativePath": "api/Usuario/Crear",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.SIS.Request.CrearUsuarioRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.SIS.UsuarioController",
+    "Method": "Desactivar",
+    "RelativePath": "api/Usuario/Desactivar/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.SIS.UsuarioController",
+    "Method": "ObtenerTodos",
+    "RelativePath": "api/Usuario/GetAllUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.SIS.UsuarioController",
+    "Method": "MiPerfil",
+    "RelativePath": "api/Usuario/mi-perfil",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

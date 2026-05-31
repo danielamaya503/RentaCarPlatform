@@ -1,0 +1,11 @@
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Models\bin\Debug\net10.0\RentaCarPlatform.Models.deps.json
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Models\bin\Debug\net10.0\RentaCarPlatform.Models.dll
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Models\bin\Debug\net10.0\RentaCarPlatform.Models.pdb
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Models\obj\Debug\net10.0\RentaCarPlatform.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Models\obj\Debug\net10.0\RentaCarPlatform.Models.AssemblyInfoInputs.cache
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Models\obj\Debug\net10.0\RentaCarPlatform.Models.AssemblyInfo.cs
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Models\obj\Debug\net10.0\RentaCarPlatform.Models.csproj.CoreCompileInputs.cache
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Models\obj\Debug\net10.0\RentaCarPlatform.Models.dll
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Models\obj\Debug\net10.0\refint\RentaCarPlatform.Models.dll
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Models\obj\Debug\net10.0\RentaCarPlatform.Models.pdb
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Models\obj\Debug\net10.0\ref\RentaCarPlatform.Models.dll

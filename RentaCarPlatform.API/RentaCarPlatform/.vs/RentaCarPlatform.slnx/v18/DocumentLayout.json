@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aleja\\OneDrive\\Escritorio\\Git\\RentaCarPlatform\\RentaCarPlatform.API\\RentaCarPlatform\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EF51E596-C91C-2396-5E42-C994DDBBB3AE}|RentaCarPlatform\\RentaCarPlatform.csproj|c:\\users\\aleja\\onedrive\\escritorio\\git\\rentacarplatform\\rentacarplatform.api\\rentacarplatform\\rentacarplatform\\controllers\\alq\\estadovehiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF51E596-C91C-2396-5E42-C994DDBBB3AE}|RentaCarPlatform\\RentaCarPlatform.csproj|solutionrelative:rentacarplatform\\controllers\\alq\\estadovehiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAD1117-7851-FE8A-84C1-776871083930}|RentaCarPlatform.Concretes\\RentaCarPlatform.Concretes.csproj|c:\\users\\aleja\\onedrive\\escritorio\\git\\rentacarplatform\\rentacarplatform.api\\rentacarplatform\\rentacarplatform.concretes\\alq\\estadovehiculoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAAD1117-7851-FE8A-84C1-776871083930}|RentaCarPlatform.Concretes\\RentaCarPlatform.Concretes.csproj|solutionrelative:rentacarplatform.concretes\\alq\\estadovehiculoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EstadoVehiculoController.cs",
+              "DocumentMoniker": "C:\\Users\\aleja\\OneDrive\\Escritorio\\Git\\RentaCarPlatform\\RentaCarPlatform.API\\RentaCarPlatform\\RentaCarPlatform\\Controllers\\ALQ\\EstadoVehiculoController.cs",
+              "RelativeDocumentMoniker": "RentaCarPlatform\\Controllers\\ALQ\\EstadoVehiculoController.cs",
+              "ToolTip": "C:\\Users\\aleja\\OneDrive\\Escritorio\\Git\\RentaCarPlatform\\RentaCarPlatform.API\\RentaCarPlatform\\RentaCarPlatform\\Controllers\\ALQ\\EstadoVehiculoController.cs",
+              "RelativeToolTip": "RentaCarPlatform\\Controllers\\ALQ\\EstadoVehiculoController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T05:46:37.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EstadoVehiculoService.cs",
+              "DocumentMoniker": "C:\\Users\\aleja\\OneDrive\\Escritorio\\Git\\RentaCarPlatform\\RentaCarPlatform.API\\RentaCarPlatform\\RentaCarPlatform.Concretes\\ALQ\\EstadoVehiculoService.cs",
+              "RelativeDocumentMoniker": "RentaCarPlatform.Concretes\\ALQ\\EstadoVehiculoService.cs",
+              "ToolTip": "C:\\Users\\aleja\\OneDrive\\Escritorio\\Git\\RentaCarPlatform\\RentaCarPlatform.API\\RentaCarPlatform\\RentaCarPlatform.Concretes\\ALQ\\EstadoVehiculoService.cs",
+              "RelativeToolTip": "RentaCarPlatform.Concretes\\ALQ\\EstadoVehiculoService.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAAwBcAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T05:17:08.927Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

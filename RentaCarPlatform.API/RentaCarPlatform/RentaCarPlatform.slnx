@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="RentaCarPlatform.Concretes/RentaCarPlatform.Concretes.csproj" />
+  <Project Path="RentaCarPlatform.Interfaces/RentaCarPlatform.Interfaces.csproj" />
+  <Project Path="RentaCarPlatform.Models/RentaCarPlatform.Models.csproj" />
+  <Project Path="RentaCarPlatform.ViewModels/RentaCarPlatform.ViewModels.csproj" />
+  <Project Path="RentaCarPlatform/RentaCarPlatform.csproj" />
+</Solution>
