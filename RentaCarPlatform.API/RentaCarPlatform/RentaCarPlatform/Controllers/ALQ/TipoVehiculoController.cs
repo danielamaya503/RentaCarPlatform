@@ -5,7 +5,7 @@ using RentaCarPlatform.Interfaces.ALQ;
 
 namespace RentaCarPlatform.Controllers.ALQ
 {
-    [Route("api/TipoVehiculo")]
+    [Route("api/tipo-vehiculos")]
     [ApiController]
     [Authorize]
     public class TipoVehiculoController : ControllerBase
@@ -18,7 +18,7 @@ namespace RentaCarPlatform.Controllers.ALQ
         }
 
         [AllowAnonymous]
-        [HttpGet("ObtenerTodo")]
+        [HttpGet]
         public async Task<IActionResult> ObtenerTodo()
         {
             var result = await service.ObtenerTodosAsync();
@@ -27,7 +27,7 @@ namespace RentaCarPlatform.Controllers.ALQ
         }
 
         [AllowAnonymous]
-        [HttpGet("Obtener/{tipoVehiculoId}")]
+        [HttpGet("{tipoVehiculoId}")]
         public async Task<IActionResult> Obtener(int tipoVehiculoId)
         {
             var result = await service.ObtenerPorIdAsync(tipoVehiculoId);
@@ -35,7 +35,7 @@ namespace RentaCarPlatform.Controllers.ALQ
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpPost("Crear")]
+        [HttpPost]
         public async Task<IActionResult> Crear([FromBody] ViewModels.ALQ.Request.CrearTipoVehiculoRequest request)
         {
             var result = await service.CrearAsync(request);
@@ -43,7 +43,7 @@ namespace RentaCarPlatform.Controllers.ALQ
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpPut("Actualizar")]
+        [HttpPut]
         public async Task<IActionResult> Actualizar([FromBody] ViewModels.ALQ.Request.ActualizarTipoVehiculoRequest request)
         {
             var result = await service.ActualizarAsync(request);
@@ -51,7 +51,7 @@ namespace RentaCarPlatform.Controllers.ALQ
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpDelete("Desactivar/{tipoVehiculoId}")]
+        [HttpDelete("{tipoVehiculoId}")]
         public async Task<IActionResult> Desactivar(int tipoVehiculoId)
         {
             var result = await service.DesactivarAsync(tipoVehiculoId);

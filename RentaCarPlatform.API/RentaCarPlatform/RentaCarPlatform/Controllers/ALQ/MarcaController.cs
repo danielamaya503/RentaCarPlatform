@@ -6,7 +6,7 @@ using RentaCarPlatform.ViewModels.ALQ.Request;
 
 namespace RentaCarPlatform.Controllers.ALQ
 {
-    [Route("api/MarcaVehiculo")]
+    [Route("api/marca-vehiculos")]
     [ApiController]
     [Authorize]
     public class MarcaController : ControllerBase
@@ -19,7 +19,7 @@ namespace RentaCarPlatform.Controllers.ALQ
         }
 
         [AllowAnonymous]
-        [HttpGet("ObtenerTodos")]
+        [HttpGet]
         public async Task<IActionResult> ObtenerTodos()
         {
             var result = await marca.ObtenerTodosAsync();
@@ -28,7 +28,7 @@ namespace RentaCarPlatform.Controllers.ALQ
         }
 
         [AllowAnonymous]
-        [HttpGet("ObtenerId/{id:int}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> ObtenerId(int id)
         {
             var result = await marca.ObtenerPorIdAsync(id);
@@ -36,7 +36,7 @@ namespace RentaCarPlatform.Controllers.ALQ
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpPost("Crear")]
+        [HttpPost]
         public async Task<IActionResult> Crear([FromBody] CrearMarcaRequest request)
         {
             var result = await marca.CrearAsync(request);
@@ -45,7 +45,7 @@ namespace RentaCarPlatform.Controllers.ALQ
         }
 
 
-        [HttpPut("Actualizar")]
+        [HttpPut]
         public async Task<IActionResult> Actualizar([FromBody] ActualizarMarcaRequest request)
         {
             var result = await marca.ActualizarAsync(request);
@@ -54,7 +54,7 @@ namespace RentaCarPlatform.Controllers.ALQ
 
         }
 
-        [HttpDelete("Desactivar/{id:int}")]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> Desactivar(int id)
         {
             var result = await marca.DesactivarAsync(id);

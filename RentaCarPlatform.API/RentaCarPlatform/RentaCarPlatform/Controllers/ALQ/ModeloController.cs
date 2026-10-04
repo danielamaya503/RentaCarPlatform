@@ -6,7 +6,7 @@ using RentaCarPlatform.ViewModels.ALQ.Request;
 
 namespace RentaCarPlatform.Controllers.ALQ
 {
-    [Route("api/ModeloVehiculo")]
+    [Route("api/modelo-vehiculos")]
     [ApiController]
     [Authorize]
     public class ModeloController : ControllerBase
@@ -18,7 +18,7 @@ namespace RentaCarPlatform.Controllers.ALQ
             this.modelo = modelo;
         }
 
-        [HttpGet("ObtenerTodos")]
+        [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> ObtenerTodos()
         {
@@ -27,7 +27,7 @@ namespace RentaCarPlatform.Controllers.ALQ
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpGet("ObtenerPorMarca/{marcaId}")]
+        [HttpGet("modelos/por-marca/{marcaId}")]
         [AllowAnonymous]
         public async Task<IActionResult> ObtenerPorMarca(int marcaId)
         {
@@ -36,7 +36,7 @@ namespace RentaCarPlatform.Controllers.ALQ
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpGet("ObtenerPorId/{modeloId}")]
+        [HttpGet("{modeloId}")]
         public async Task<IActionResult> ObtenerPorId(int modeloId)
         {
             var result = await modelo.ObtenerPorIdAsync(modeloId);
@@ -44,7 +44,7 @@ namespace RentaCarPlatform.Controllers.ALQ
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpPost("Crear")]
+        [HttpPost]
         public async Task<IActionResult> Crear([FromBody] CrearModeloRequest request)
         {
             var result = await modelo.CrearAsync(request);
@@ -52,7 +52,7 @@ namespace RentaCarPlatform.Controllers.ALQ
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpPut("Actualizar")]
+        [HttpPut]
         public async Task<IActionResult> Actualizar([FromBody] ActualizarModeloRequest request)
         {
             var result = await modelo.ActualizarAsync(request);
@@ -60,7 +60,7 @@ namespace RentaCarPlatform.Controllers.ALQ
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpDelete("Desactivar/{modeloId}")]
+        [HttpDelete("{modeloId}")]
         public async Task<IActionResult> Desactivar(int modeloId)
         {
             var result = await modelo.DesactivarAsync(modeloId);

@@ -59,6 +59,11 @@ builder.Services.AddScoped<IMarcaService, MarcaService>();
 builder.Services.AddScoped<IModeloService, ModeloService>();
 builder.Services.AddScoped<ITipoVehiculoService, TipoVehiculoService>();
 builder.Services.AddScoped<IEstadoVehiculoService, EstadoVehiculoService>();
+builder.Services.AddScoped<ICaracteristicaService, CaracteristicaService>();
+builder.Services.AddScoped<IVehiculoService, VehiculoService>();
+builder.Services.AddScoped<IVehiculoImagenService, VehiculoImagenService>();
+builder.Services.AddScoped<IVehiculoCaracteristicaService, VehiculoCaracteristicaService>();
+
 
 builder.Services.AddAuthorization();
 

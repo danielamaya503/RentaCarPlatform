@@ -261,10 +261,10 @@
         }
       }
     },
-    "/api/EstadoVehicu/ObtenerTodos": {
+    "/api/caracteristicas-vehiculos/caracteristicas": {
       "get": {
         "tags": [
-          "EstadoVehiculo"
+          "Caracteristica"
         ],
         "responses": {
           "200": {
@@ -273,22 +273,19 @@
         }
       }
     },
-    "/api/EstadoVehicu/Obtener/{estadoVehiculoId}": {
+    "/api/caracteristicas-vehiculos/caracteristica/{id}": {
       "get": {
         "tags": [
-          "EstadoVehiculo"
+          "Caracteristica"
         ],
         "parameters": [
           {
-            "name": "estadoVehiculoId",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
               "pattern": "^-?(?:0|[1-9]\\d*)$",
-              "type": [
-                "integer",
-                "string"
-              ],
+              "type": "integer",
               "format": "int32"
             }
           }
@@ -300,7 +297,103 @@
         }
       }
     },
-    "/api/EstadoVehicu/Crear": {
+    "/api/caracteristicas-vehiculos/caracteristica": {
+      "post": {
+        "tags": [
+          "Caracteristica"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearCaracteristicaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearCaracteristicaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearCaracteristicaRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Caracteristica"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarCaracteristicaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarCaracteristicaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarCaracteristicaRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/caracteristicas-vehiculos/caracteristicas/{id}": {
+      "delete": {
+        "tags": [
+          "Caracteristica"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/estado-vehiculos": {
+      "get": {
+        "tags": [
+          "EstadoVehiculo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "post": {
         "tags": [
           "EstadoVehiculo"
@@ -330,9 +423,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/EstadoVehicu/Actualizar": {
+      },
       "put": {
         "tags": [
           "EstadoVehiculo"
@@ -364,7 +455,32 @@
         }
       }
     },
-    "/api/EstadoVehicu/Desactivar/{estadoVehiculoId}": {
+    "/api/estado-vehiculos/{estadoVehiculoId}": {
+      "get": {
+        "tags": [
+          "EstadoVehiculo"
+        ],
+        "parameters": [
+          {
+            "name": "estadoVehiculoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "delete": {
         "tags": [
           "EstadoVehiculo"
@@ -391,7 +507,7 @@
         }
       }
     },
-    "/api/MarcaVehiculo/ObtenerTodos": {
+    "/api/marca-vehiculos": {
       "get": {
         "tags": [
           "Marca"
@@ -401,33 +517,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/MarcaVehiculo/ObtenerId/{id}": {
-      "get": {
-        "tags": [
-          "Marca"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "pattern": "^-?(?:0|[1-9]\\d*)$",
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/MarcaVehiculo/Crear": {
+      },
       "post": {
         "tags": [
           "Marca"
@@ -457,9 +547,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/MarcaVehiculo/Actualizar": {
+      },
       "put": {
         "tags": [
           "Marca"
@@ -491,7 +579,29 @@
         }
       }
     },
-    "/api/MarcaVehiculo/Desactivar/{id}": {
+    "/api/marca-vehiculos/{id}": {
+      "get": {
+        "tags": [
+          "Marca"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "delete": {
         "tags": [
           "Marca"
@@ -515,7 +625,7 @@
         }
       }
     },
-    "/api/ModeloVehiculo/ObtenerTodos": {
+    "/api/modelo-vehiculos": {
       "get": {
         "tags": [
           "Modelo"
@@ -525,9 +635,69 @@
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": [
+          "Modelo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearModeloRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearModeloRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearModeloRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Modelo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarModeloRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarModeloRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarModeloRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
-    "/api/ModeloVehiculo/ObtenerPorMarca/{marcaId}": {
+    "/api/modelo-vehiculos/modelos/por-marca/{marcaId}": {
       "get": {
         "tags": [
           "Modelo"
@@ -554,7 +724,7 @@
         }
       }
     },
-    "/api/ModeloVehiculo/ObtenerPorId/{modeloId}": {
+    "/api/modelo-vehiculos/{modeloId}": {
       "get": {
         "tags": [
           "Modelo"
@@ -579,73 +749,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/ModeloVehiculo/Crear": {
-      "post": {
-        "tags": [
-          "Modelo"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CrearModeloRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CrearModeloRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CrearModeloRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/ModeloVehiculo/Actualizar": {
-      "put": {
-        "tags": [
-          "Modelo"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ActualizarModeloRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ActualizarModeloRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ActualizarModeloRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/ModeloVehiculo/Desactivar/{modeloId}": {
+      },
       "delete": {
         "tags": [
           "Modelo"
@@ -672,7 +776,7 @@
         }
       }
     },
-    "/api/TipoVehiculo/ObtenerTodo": {
+    "/api/tipo-vehiculos": {
       "get": {
         "tags": [
           "TipoVehiculo"
@@ -682,36 +786,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/TipoVehiculo/Obtener/{tipoVehiculoId}": {
-      "get": {
-        "tags": [
-          "TipoVehiculo"
-        ],
-        "parameters": [
-          {
-            "name": "tipoVehiculoId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "pattern": "^-?(?:0|[1-9]\\d*)$",
-              "type": [
-                "integer",
-                "string"
-              ],
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/TipoVehiculo/Crear": {
+      },
       "post": {
         "tags": [
           "TipoVehiculo"
@@ -741,9 +816,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/TipoVehiculo/Actualizar": {
+      },
       "put": {
         "tags": [
           "TipoVehiculo"
@@ -775,7 +848,32 @@
         }
       }
     },
-    "/api/TipoVehiculo/Desactivar/{tipoVehiculoId}": {
+    "/api/tipo-vehiculos/{tipoVehiculoId}": {
+      "get": {
+        "tags": [
+          "TipoVehiculo"
+        ],
+        "parameters": [
+          {
+            "name": "tipoVehiculoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "delete": {
         "tags": [
           "TipoVehiculo"
@@ -791,6 +889,706 @@
                 "integer",
                 "string"
               ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/vehiculos-caracteristica/{vehiculoId}": {
+      "get": {
+        "tags": [
+          "VehiculoCaracteristica"
+        ],
+        "parameters": [
+          {
+            "name": "vehiculoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/vehiculos-caracteristica": {
+      "post": {
+        "tags": [
+          "VehiculoCaracteristica"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignarCaracteristicasRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignarCaracteristicasRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignarCaracteristicasRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "VehiculoCaracteristica"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoverCaracteristicasRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoverCaracteristicasRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoverCaracteristicasRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/vehiculos-caracteristica/reemplazar": {
+      "put": {
+        "tags": [
+          "VehiculoCaracteristica"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReemplazarCaracteristicasRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReemplazarCaracteristicasRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReemplazarCaracteristicasRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/vehiculos": {
+      "get": {
+        "tags": [
+          "Vehiculo"
+        ],
+        "parameters": [
+          {
+            "name": "Busqueda",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MarcaId",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "ModeloId",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "TipoVehiculoId",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Transmision",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Combustible",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CapacidadPasajeros",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "AnioDesde",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "AnioHasta",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PrecioMinimo",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+              "type": [
+                "number",
+                "string"
+              ],
+              "format": "double"
+            }
+          },
+          {
+            "name": "PrecioMaximo",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+              "type": [
+                "number",
+                "string"
+              ],
+              "format": "double"
+            }
+          },
+          {
+            "name": "Pagina",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "TamanoPagina",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Vehiculo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearVehiculoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearVehiculoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearVehiculoRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Vehiculo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarVehiculoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarVehiculoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarVehiculoRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/vehiculos/{id}": {
+      "get": {
+        "tags": [
+          "Vehiculo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Vehiculo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/vehiculos/catalogo": {
+      "get": {
+        "tags": [
+          "Vehiculo"
+        ],
+        "parameters": [
+          {
+            "name": "Busqueda",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MarcaId",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "ModeloId",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "TipoVehiculoId",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Transmision",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Combustible",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CapacidadPasajeros",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "AnioDesde",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "AnioHasta",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PrecioMinimo",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+              "type": [
+                "number",
+                "string"
+              ],
+              "format": "double"
+            }
+          },
+          {
+            "name": "PrecioMaximo",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+              "type": [
+                "number",
+                "string"
+              ],
+              "format": "double"
+            }
+          },
+          {
+            "name": "Pagina",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "TamanoPagina",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/vehiculo-imagen/{vehiculoId}": {
+      "get": {
+        "tags": [
+          "VehiculoImagen"
+        ],
+        "parameters": [
+          {
+            "name": "vehiculoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/vehiculo-imagen": {
+      "post": {
+        "tags": [
+          "VehiculoImagen"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearVehiculoImagenesRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearVehiculoImagenesRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearVehiculoImagenesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "VehiculoImagen"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarVehiculoImagenRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarVehiculoImagenRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarVehiculoImagenRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/vehiculo-imagen/principal/{imagenId}": {
+      "put": {
+        "tags": [
+          "VehiculoImagen"
+        ],
+        "parameters": [
+          {
+            "name": "imagenId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/vehiculo-imagen/orden": {
+      "put": {
+        "tags": [
+          "VehiculoImagen"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReordenarVehiculoImagenesRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReordenarVehiculoImagenesRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReordenarVehiculoImagenesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/vehiculo-imagen/{imagenId}": {
+      "delete": {
+        "tags": [
+          "VehiculoImagen"
+        ],
+        "parameters": [
+          {
+            "name": "imagenId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
               "format": "int32"
             }
           }
@@ -805,6 +1603,37 @@
   },
   "components": {
     "schemas": {
+      "ActualizarCaracteristicaRequest": {
+        "required": [
+          "caracteristicaId",
+          "nombre"
+        ],
+        "type": "object",
+        "properties": {
+          "caracteristicaId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "nombre": {
+            "maxLength": 100,
+            "type": "string"
+          },
+          "icono": {
+            "maxLength": 50,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "activo": {
+            "type": "boolean"
+          }
+        }
+      },
       "ActualizarEstadoVehiculoRequest": {
         "required": [
           "estadoVehiculoId",
@@ -948,6 +1777,162 @@
           }
         }
       },
+      "ActualizarVehiculoImagenRequest": {
+        "required": [
+          "vehiculos"
+        ],
+        "type": "object",
+        "properties": {
+          "vehiculos": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VehiculoItem"
+            }
+          }
+        }
+      },
+      "ActualizarVehiculoRequest": {
+        "required": [
+          "vehiculoId",
+          "modeloId",
+          "tipoVehiculoId",
+          "estadoVehiculoId",
+          "anio",
+          "placa",
+          "color",
+          "transmision",
+          "combustible",
+          "capacidadPasajeros",
+          "precioDiario"
+        ],
+        "type": "object",
+        "properties": {
+          "vehiculoId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "modeloId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "tipoVehiculoId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "estadoVehiculoId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "anio": {
+            "maximum": 2100,
+            "minimum": 1900,
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "placa": {
+            "maxLength": 20,
+            "type": "string"
+          },
+          "color": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "transmision": {
+            "pattern": "^(Automatico|Manual)$",
+            "type": "string"
+          },
+          "combustible": {
+            "pattern": "^(Gasolina|Diesel|Hibrido|Electrico)$",
+            "type": "string"
+          },
+          "capacidadPasajeros": {
+            "maximum": 99,
+            "minimum": 1,
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "precioDiario": {
+            "minimum": 0.01,
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "double"
+          },
+          "descripcion": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "caracteristicaIds": {
+            "type": "array",
+            "items": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "AsignarCaracteristicasRequest": {
+        "required": [
+          "vehiculoId",
+          "caracteristicaIds"
+        ],
+        "type": "object",
+        "properties": {
+          "vehiculoId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "caracteristicaIds": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        }
+      },
       "CambiarContrasenaRequest": {
         "type": "object",
         "properties": {
@@ -961,6 +1946,28 @@
           },
           "nuevaContrasena": {
             "type": "string"
+          }
+        }
+      },
+      "CrearCaracteristicaRequest": {
+        "required": [
+          "nombre"
+        ],
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "maxLength": 100,
+            "type": "string"
+          },
+          "icono": {
+            "maxLength": 50,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "activo": {
+            "type": "boolean"
           }
         }
       },
@@ -1075,6 +2082,154 @@
           }
         }
       },
+      "CrearVehiculoImagenesRequest": {
+        "required": [
+          "vehiculoId",
+          "imagenes"
+        ],
+        "type": "object",
+        "properties": {
+          "vehiculoId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "imagenes": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UrlImagenItem"
+            }
+          }
+        }
+      },
+      "CrearVehiculoRequest": {
+        "required": [
+          "modeloId",
+          "tipoVehiculoId",
+          "estadoVehiculoId",
+          "anio",
+          "placa",
+          "color",
+          "transmision",
+          "combustible",
+          "capacidadPasajeros",
+          "precioDiario"
+        ],
+        "type": "object",
+        "properties": {
+          "modeloId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "tipoVehiculoId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "estadoVehiculoId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "anio": {
+            "maximum": 2999,
+            "minimum": 1900,
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "placa": {
+            "maxLength": 20,
+            "type": "string"
+          },
+          "color": {
+            "maxLength": 30,
+            "type": "string"
+          },
+          "transmision": {
+            "pattern": "^(Automatico|Manual)$",
+            "type": "string"
+          },
+          "combustible": {
+            "pattern": "^(Gasolina|Diesel|Hibrido|Electrico)$",
+            "type": "string"
+          },
+          "capacidadPasajeros": {
+            "maximum": 99,
+            "minimum": 1,
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "precioDiario": {
+            "minimum": 0.01,
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "double"
+          },
+          "descripcion": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "caracteristicaIds": {
+            "type": "array",
+            "items": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "ImagenOrdenItem": {
+        "type": "object",
+        "properties": {
+          "imagenId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "orden": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
       "LoginRequest": {
         "type": "object",
         "properties": {
@@ -1083,6 +2238,143 @@
           },
           "contrasena": {
             "type": "string"
+          }
+        }
+      },
+      "ReemplazarCaracteristicasRequest": {
+        "required": [
+          "vehiculoId"
+        ],
+        "type": "object",
+        "properties": {
+          "vehiculoId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "caracteristicaIds": {
+            "type": "array",
+            "items": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "RemoverCaracteristicasRequest": {
+        "required": [
+          "vehiculoId",
+          "caracteristicaIds"
+        ],
+        "type": "object",
+        "properties": {
+          "vehiculoId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "caracteristicaIds": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "ReordenarVehiculoImagenesRequest": {
+        "required": [
+          "vehiculoId",
+          "imagenes"
+        ],
+        "type": "object",
+        "properties": {
+          "vehiculoId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "imagenes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ImagenOrdenItem"
+            }
+          }
+        }
+      },
+      "UrlImagenItem": {
+        "required": [
+          "urlImagen"
+        ],
+        "type": "object",
+        "properties": {
+          "urlImagen": {
+            "maxLength": 500,
+            "type": "string",
+            "format": "uri"
+          },
+          "esPrincipal": {
+            "type": "boolean"
+          },
+          "orden": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "null",
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
+      "VehiculoItem": {
+        "required": [
+          "imagenId",
+          "urlImagen"
+        ],
+        "type": "object",
+        "properties": {
+          "imagenId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "urlImagen": {
+            "maxLength": 500,
+            "type": "string",
+            "format": "uri"
+          },
+          "esPrincipal": {
+            "type": "boolean"
+          },
+          "orden": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
           }
         }
       }
@@ -1096,6 +2388,9 @@
       "name": "Usuario"
     },
     {
+      "name": "Caracteristica"
+    },
+    {
       "name": "EstadoVehiculo"
     },
     {
@@ -1106,6 +2401,15 @@
     },
     {
       "name": "TipoVehiculo"
+    },
+    {
+      "name": "VehiculoCaracteristica"
+    },
+    {
+      "name": "Vehiculo"
+    },
+    {
+      "name": "VehiculoImagen"
     }
   ]
 }

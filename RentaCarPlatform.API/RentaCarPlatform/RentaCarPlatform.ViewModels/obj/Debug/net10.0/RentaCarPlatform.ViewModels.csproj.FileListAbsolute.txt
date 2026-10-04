@@ -9,3 +9,4 @@ C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\Ren
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.ViewModels\obj\Debug\net10.0\refint\RentaCarPlatform.ViewModels.dll
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.ViewModels\obj\Debug\net10.0\RentaCarPlatform.ViewModels.pdb
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.ViewModels\obj\Debug\net10.0\ref\RentaCarPlatform.ViewModels.dll
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.ViewModels\obj\Debug\net10.0\RentaCarPlatform.ViewModels.sourcelink.json

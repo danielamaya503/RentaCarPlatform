@@ -17,6 +17,7 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
+build_property.EntryPointFilePath = 
 build_property.RootNamespace = RentaCarPlatform.Concretes
 build_property.ProjectDir = C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Concretes\
 build_property.EnableComHosting = 

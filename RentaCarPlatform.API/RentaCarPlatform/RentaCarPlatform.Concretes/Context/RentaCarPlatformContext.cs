@@ -56,6 +56,8 @@ public partial class RentaCarPlatformContext : DbContext
 
     public virtual DbSet<VwVehiculosDisponible> VwVehiculosDisponibles { get; set; }
 
+    public virtual DbSet<VehiculoCaracteristicas> VehiculoCaracteristicas { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Caracteristica>(entity =>
@@ -464,23 +466,7 @@ public partial class RentaCarPlatformContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Vehiculos_Tipo");
 
-            entity.HasMany(d => d.Caracteristicas).WithMany(p => p.Vehiculos)
-                .UsingEntity<Dictionary<string, object>>(
-                    "VehiculoCaracteristica",
-                    r => r.HasOne<Caracteristica>().WithMany()
-                        .HasForeignKey("CaracteristicaId")
-                        .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK_VehCar_Caracteristica"),
-                    l => l.HasOne<Vehiculo>().WithMany()
-                        .HasForeignKey("VehiculoId")
-                        .HasConstraintName("FK_VehCar_Vehiculo"),
-                    j =>
-                    {
-                        j.HasKey("VehiculoId", "CaracteristicaId");
-                        j.ToTable("VehiculoCaracteristicas", "ALQ");
-                        j.IndexerProperty<int>("VehiculoId").HasColumnName("VehiculoID");
-                        j.IndexerProperty<int>("CaracteristicaId").HasColumnName("CaracteristicaID");
-                    });
+   
         });
 
         modelBuilder.Entity<VehiculoImagene>(entity =>
@@ -667,8 +653,36 @@ public partial class RentaCarPlatformContext : DbContext
             entity.Property(e => e.VehiculoId).HasColumnName("VehiculoID");
         });
 
+        modelBuilder.Entity<VehiculoCaracteristicas>(entity =>
+        {
+            entity.ToTable("VehiculoCaracteristicas", "ALQ");
+
+            entity.HasKey(e => new { e.VehiculoId, e.CaracteristicaId })
+                  .HasName("PK_VehiculoCaracteristicas");
+
+            entity.Property(e => e.VehiculoId)
+                  .HasColumnName("VehiculoID");
+
+            entity.Property(e => e.CaracteristicaId)
+                  .HasColumnName("CaracteristicaID");
+
+            entity.HasOne(e => e.Vehiculo)
+                  .WithMany(v => v.VehiculoCaracteristicas)
+                  .HasForeignKey(e => e.VehiculoId)
+                  .OnDelete(DeleteBehavior.Cascade)
+                  .HasConstraintName("FK_VehCar_Vehiculo");
+
+            entity.HasOne(e => e.Caracteristica)
+                  .WithMany(c => c.VehiculoCaracteristicas)
+                  .HasForeignKey(e => e.CaracteristicaId)
+                  .OnDelete(DeleteBehavior.ClientSetNull)
+                  .HasConstraintName("FK_VehCar_Caracteristica");
+        });
+
         OnModelCreatingPartial(modelBuilder);
     }
+
+
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

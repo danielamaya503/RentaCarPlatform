@@ -15,3 +15,4 @@ C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\Ren
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Interfaces\bin\Debug\net10.0\RentaCarPlatform.ViewModels.pdb
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Interfaces\obj\Debug\net10.0\RentaCarPlatform.Interfaces.csproj.AssemblyReference.cache
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Interfaces\obj\Debug\net10.0\RentaCar.FF612EEC.Up2Date
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform.Interfaces\obj\Debug\net10.0\RentaCarPlatform.Interfaces.sourcelink.json

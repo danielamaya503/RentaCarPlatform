@@ -36,16 +36,74 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RentaCarPlatform.Controllers.ALQ.EstadoVehiculoController",
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.CaracteristicaController",
+    "Method": "Crear",
+    "RelativePath": "api/caracteristicas-vehiculos/caracteristica",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.CrearCaracteristicaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.CaracteristicaController",
     "Method": "Actualizar",
-    "RelativePath": "api/EstadoVehicu/Actualizar",
+    "RelativePath": "api/caracteristicas-vehiculos/caracteristica",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarEstadoVehiculoRequest",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarCaracteristicaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.CaracteristicaController",
+    "Method": "ObtenerPorId",
+    "RelativePath": "api/caracteristicas-vehiculos/caracteristica/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.CaracteristicaController",
+    "Method": "ObtenerTodos",
+    "RelativePath": "api/caracteristicas-vehiculos/caracteristicas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.CaracteristicaController",
+    "Method": "Eliminar",
+    "RelativePath": "api/caracteristicas-vehiculos/caracteristicas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -53,8 +111,18 @@
   },
   {
     "ContainingType": "RentaCarPlatform.Controllers.ALQ.EstadoVehiculoController",
+    "Method": "ObtenerTodos",
+    "RelativePath": "api/estado-vehiculos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.EstadoVehiculoController",
     "Method": "Crear",
-    "RelativePath": "api/EstadoVehicu/Crear",
+    "RelativePath": "api/estado-vehiculos",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -69,8 +137,40 @@
   },
   {
     "ContainingType": "RentaCarPlatform.Controllers.ALQ.EstadoVehiculoController",
+    "Method": "Actualizar",
+    "RelativePath": "api/estado-vehiculos",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarEstadoVehiculoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.EstadoVehiculoController",
+    "Method": "Obtener",
+    "RelativePath": "api/estado-vehiculos/{estadoVehiculoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estadoVehiculoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.EstadoVehiculoController",
     "Method": "Desactivar",
-    "RelativePath": "api/EstadoVehicu/Desactivar/{estadoVehiculoId}",
+    "RelativePath": "api/estado-vehiculos/{estadoVehiculoId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -84,25 +184,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RentaCarPlatform.Controllers.ALQ.EstadoVehiculoController",
-    "Method": "Obtener",
-    "RelativePath": "api/EstadoVehicu/Obtener/{estadoVehiculoId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "estadoVehiculoId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RentaCarPlatform.Controllers.ALQ.EstadoVehiculoController",
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.MarcaController",
     "Method": "ObtenerTodos",
-    "RelativePath": "api/EstadoVehicu/ObtenerTodos",
+    "RelativePath": "api/marca-vehiculos",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -111,24 +195,8 @@
   },
   {
     "ContainingType": "RentaCarPlatform.Controllers.ALQ.MarcaController",
-    "Method": "Actualizar",
-    "RelativePath": "api/MarcaVehiculo/Actualizar",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarMarcaRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RentaCarPlatform.Controllers.ALQ.MarcaController",
     "Method": "Crear",
-    "RelativePath": "api/MarcaVehiculo/Crear",
+    "RelativePath": "api/marca-vehiculos",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -143,8 +211,40 @@
   },
   {
     "ContainingType": "RentaCarPlatform.Controllers.ALQ.MarcaController",
+    "Method": "Actualizar",
+    "RelativePath": "api/marca-vehiculos",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarMarcaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.MarcaController",
+    "Method": "ObtenerId",
+    "RelativePath": "api/marca-vehiculos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.MarcaController",
     "Method": "Desactivar",
-    "RelativePath": "api/MarcaVehiculo/Desactivar/{id}",
+    "RelativePath": "api/marca-vehiculos/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -158,25 +258,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RentaCarPlatform.Controllers.ALQ.MarcaController",
-    "Method": "ObtenerId",
-    "RelativePath": "api/MarcaVehiculo/ObtenerId/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RentaCarPlatform.Controllers.ALQ.MarcaController",
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
     "Method": "ObtenerTodos",
-    "RelativePath": "api/MarcaVehiculo/ObtenerTodos",
+    "RelativePath": "api/modelo-vehiculos",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -185,24 +269,8 @@
   },
   {
     "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
-    "Method": "Actualizar",
-    "RelativePath": "api/ModeloVehiculo/Actualizar",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarModeloRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
     "Method": "Crear",
-    "RelativePath": "api/ModeloVehiculo/Crear",
+    "RelativePath": "api/modelo-vehiculos",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -217,9 +285,25 @@
   },
   {
     "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
-    "Method": "Desactivar",
-    "RelativePath": "api/ModeloVehiculo/Desactivar/{modeloId}",
-    "HttpMethod": "DELETE",
+    "Method": "Actualizar",
+    "RelativePath": "api/modelo-vehiculos",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarModeloRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
+    "Method": "ObtenerPorId",
+    "RelativePath": "api/modelo-vehiculos/{modeloId}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -233,9 +317,9 @@
   },
   {
     "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
-    "Method": "ObtenerPorId",
-    "RelativePath": "api/ModeloVehiculo/ObtenerPorId/{modeloId}",
-    "HttpMethod": "GET",
+    "Method": "Desactivar",
+    "RelativePath": "api/modelo-vehiculos/{modeloId}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -250,7 +334,7 @@
   {
     "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
     "Method": "ObtenerPorMarca",
-    "RelativePath": "api/ModeloVehiculo/ObtenerPorMarca/{marcaId}",
+    "RelativePath": "api/modelo-vehiculos/modelos/por-marca/{marcaId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -264,9 +348,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RentaCarPlatform.Controllers.ALQ.ModeloController",
-    "Method": "ObtenerTodos",
-    "RelativePath": "api/ModeloVehiculo/ObtenerTodos",
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.TipoVehiculoController",
+    "Method": "ObtenerTodo",
+    "RelativePath": "api/tipo-vehiculos",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -275,24 +359,8 @@
   },
   {
     "ContainingType": "RentaCarPlatform.Controllers.ALQ.TipoVehiculoController",
-    "Method": "Actualizar",
-    "RelativePath": "api/TipoVehiculo/Actualizar",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarTipoVehiculoRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RentaCarPlatform.Controllers.ALQ.TipoVehiculoController",
     "Method": "Crear",
-    "RelativePath": "api/TipoVehiculo/Crear",
+    "RelativePath": "api/tipo-vehiculos",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -307,8 +375,40 @@
   },
   {
     "ContainingType": "RentaCarPlatform.Controllers.ALQ.TipoVehiculoController",
+    "Method": "Actualizar",
+    "RelativePath": "api/tipo-vehiculos",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarTipoVehiculoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.TipoVehiculoController",
+    "Method": "Obtener",
+    "RelativePath": "api/tipo-vehiculos/{tipoVehiculoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoVehiculoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.TipoVehiculoController",
     "Method": "Desactivar",
-    "RelativePath": "api/TipoVehiculo/Desactivar/{tipoVehiculoId}",
+    "RelativePath": "api/tipo-vehiculos/{tipoVehiculoId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -319,32 +419,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RentaCarPlatform.Controllers.ALQ.TipoVehiculoController",
-    "Method": "Obtener",
-    "RelativePath": "api/TipoVehiculo/Obtener/{tipoVehiculoId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "tipoVehiculoId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RentaCarPlatform.Controllers.ALQ.TipoVehiculoController",
-    "Method": "ObtenerTodo",
-    "RelativePath": "api/TipoVehiculo/ObtenerTodo",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -455,6 +529,382 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoImagenController",
+    "Method": "Crear",
+    "RelativePath": "api/vehiculo-imagen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.CrearVehiculoImagenesRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoImagenController",
+    "Method": "Actualizar",
+    "RelativePath": "api/vehiculo-imagen",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarVehiculoImagenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoImagenController",
+    "Method": "Eliminar",
+    "RelativePath": "api/vehiculo-imagen/{imagenId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "imagenId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoImagenController",
+    "Method": "ObtenerPorVehiculo",
+    "RelativePath": "api/vehiculo-imagen/{vehiculoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehiculoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoImagenController",
+    "Method": "Reordenar",
+    "RelativePath": "api/vehiculo-imagen/orden",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ReordenarVehiculoImagenesRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoImagenController",
+    "Method": "EstablecerComoPrincipal",
+    "RelativePath": "api/vehiculo-imagen/principal/{imagenId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "imagenId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoController",
+    "Method": "ObtenerTodos",
+    "RelativePath": "api/vehiculos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Busqueda",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MarcaId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModeloId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipoVehiculoId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Transmision",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Combustible",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CapacidadPasajeros",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnioDesde",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnioHasta",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PrecioMinimo",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PrecioMaximo",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TamanoPagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoController",
+    "Method": "Crear",
+    "RelativePath": "api/vehiculos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.CrearVehiculoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoController",
+    "Method": "Actualizar",
+    "RelativePath": "api/vehiculos",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ActualizarVehiculoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoCaracteristicaController",
+    "Method": "Asignar",
+    "RelativePath": "api/vehiculos-caracteristica",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.AsignarCaracteristicasRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoCaracteristicaController",
+    "Method": "Remover",
+    "RelativePath": "api/vehiculos-caracteristica",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.RemoverCaracteristicasRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoCaracteristicaController",
+    "Method": "ObtenerPorVehiculo",
+    "RelativePath": "api/vehiculos-caracteristica/{vehiculoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehiculoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoCaracteristicaController",
+    "Method": "ReemplazarTodas",
+    "RelativePath": "api/vehiculos-caracteristica/reemplazar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RentaCarPlatform.ViewModels.ALQ.Request.ReemplazarCaracteristicasRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoController",
+    "Method": "ObtenerPorId",
+    "RelativePath": "api/vehiculos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoController",
+    "Method": "Eliminar",
+    "RelativePath": "api/vehiculos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RentaCarPlatform.Controllers.ALQ.VehiculoController",
+    "Method": "ObtenerCatalogo",
+    "RelativePath": "api/vehiculos/catalogo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Busqueda",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MarcaId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ModeloId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipoVehiculoId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Transmision",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Combustible",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CapacidadPasajeros",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnioDesde",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnioHasta",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PrecioMinimo",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PrecioMaximo",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TamanoPagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   }
 ]

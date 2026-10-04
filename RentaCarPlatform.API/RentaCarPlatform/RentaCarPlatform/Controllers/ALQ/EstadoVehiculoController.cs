@@ -6,7 +6,7 @@ using RentaCarPlatform.ViewModels.ALQ.Request;
 
 namespace RentaCarPlatform.Controllers.ALQ
 {
-    [Route("api/EstadoVehicu")]
+    [Route("api/estado-vehiculos")]
     [ApiController]
     [Authorize]
     public class EstadoVehiculoController : ControllerBase
@@ -19,7 +19,7 @@ namespace RentaCarPlatform.Controllers.ALQ
         }
 
         [AllowAnonymous]
-        [HttpGet("ObtenerTodos")]
+        [HttpGet]
         public async Task<IActionResult> ObtenerTodos()
         {
             var result = await service.ObtenerTodosAsync();
@@ -27,28 +27,28 @@ namespace RentaCarPlatform.Controllers.ALQ
         }
 
         [AllowAnonymous]
-        [HttpGet("Obtener/{estadoVehiculoId}")]
+        [HttpGet("{estadoVehiculoId}")]
         public async Task<IActionResult> Obtener(int estadoVehiculoId)
         {
             var result = await service.ObtenerPorIdAsync(estadoVehiculoId);
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpPost("Crear")]
+        [HttpPost]
         public async Task<IActionResult> Crear([FromBody] CrearEstadoVehiculoRequest request)
         {
             var result = await service.CrearAsync(request);
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpPut("Actualizar")]
+        [HttpPut]
         public async Task<IActionResult> Actualizar([FromBody] ActualizarEstadoVehiculoRequest request)
         {
             var result = await service.ActualizarAsync(request);
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpDelete("Desactivar/{estadoVehiculoId}")]
+        [HttpDelete("{estadoVehiculoId}")]
         public async Task<IActionResult> Desactivar(int estadoVehiculoId)
         {
             var result = await service.DesactivarAsync(estadoVehiculoId);

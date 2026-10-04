@@ -90,7 +90,6 @@ C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\Ren
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform\obj\Debug\net10.0\RentaCarPlatform.AssemblyInfoInputs.cache
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform\obj\Debug\net10.0\RentaCarPlatform.AssemblyInfo.cs
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform\obj\Debug\net10.0\RentaCarPlatform.csproj.CoreCompileInputs.cache
-C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform\obj\Debug\net10.0\RentaCarPlatform.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform\obj\Debug\net10.0\RentaCarPlatform.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
@@ -167,4 +166,6 @@ C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\Ren
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform\bin\Debug\net10.0\RentaCarPlatform.Concretes.dll
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform\bin\Debug\net10.0\RentaCarPlatform.Concretes.pdb
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform\obj\Debug\net10.0\RentaCarPlatform.sourcelink.json
+C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform\obj\Debug\net10.0\RentaCarPlatform.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\aleja\OneDrive\Escritorio\Git\RentaCarPlatform\RentaCarPlatform.API\RentaCarPlatform\RentaCarPlatform\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
